@@ -55,7 +55,7 @@ def outputResults(team_name, config_map, team_results, debug):
     smtp_cc = config_map['global']['smtp']['cc_addrs']
     email_template_file = config_map['global']['smtp']['template']
     email_to_addr = getToAddr(team_name, config_map)
-    email_subject = "Team %s AWS Cost Report for %s to %s" % (team_name, getStartDate(config_map), getEndDate(config_map))
+    email_subject = "Team %s Azure Cost Report for %s to %s" % (team_name, getStartDate(config_map), getEndDate(config_map))
     if debug:
         print("Sending email to %s for team %s" % (email_to_addr, team_name))
     values = {}
