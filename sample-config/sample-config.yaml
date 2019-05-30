@@ -1,0 +1,24 @@
+global:
+  days_to_report: 7
+  enrollment_number: "123456789012"
+  api_key: "thisisareallylongapikeythatigotfromtheazureenterpriseportal"
+  smtp:
+    server: "my.smtp.server"
+    port: "587"
+    tls: True
+    user: "smtpauth@mydomain.com"
+    password: "password"
+    from_addr: "reports@acme.com"
+    cc_addrs:
+      - "cfo@acme.com"
+      - "cto@acme.com"
+    template: "team-summary.html"
+
+teams:
+  - name: "one"
+    email: "team-one@acme.com"
+    subscription: "team-one-subsription"
+
+  - name: "two"
+    email: "team-two@acme.com"
+    subscription: "team-two-subsription"
