@@ -28,8 +28,10 @@ def main():
     if debug:
         print("All costs by team: %s" % costs_by_team)
     for team in config_map['teams']:
-        output.outputResults(team['name'], config_map, costs_by_team[team['subscription']], debug)
-
+        try:
+            output.outputResults(team['name'], config_map, costs_by_team[team['subscription']], debug)
+        except Exception as e:
+            print("Error emailing results for subscription name %s. Verify the spelling" % e)
 
 if __name__ == "__main__":
     main()
